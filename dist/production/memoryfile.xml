@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="/root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/dist/production/target.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>8192</length>
+      <used>2452</used>
+      <free>5740</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>65274</length>
+      <used>41442</used>
+      <free>23832</free>
+    </memory>
+  </executable>
+</project>
