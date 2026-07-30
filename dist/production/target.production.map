@@ -259,14 +259,14 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x44a8          0x66fc  (26364)
-.const                      0x46a8               0x838           0xc54  (3156)
-.text                       0x4ee0              0x1bae          0x2985  (10629)
-.dinit                      0x6a8e               0x10a           0x18f  (399)
-.text                       0x6b98               0x230           0x348  (840)
-.init.delay32               0x6dc8                0x1c            0x2a  (42)
-.text                       0x6de4                0x26            0x39  (57)
+.const                      0x46a8               0x820           0xc30  (3120)
+.text                       0x4ec8              0x1bae          0x2985  (10629)
+.dinit                      0x6a76               0x10a           0x18f  (399)
+.text                       0x6b80               0x1bc           0x29a  (666)
+.init.delay32               0x6d3c                0x1c            0x2a  (42)
+.text                       0x6d58                0x26            0x39  (57)
 
-                 Total "program" memory used (bytes):         0xa20f  (41487) 63%
+                 Total "program" memory used (bytes):         0xa13d  (41277) 63%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -455,162 +455,161 @@ External Symbols in Program Memory (by address):
                   0x0045f4                  _scalbnf
                   0x004648                  _scalbnl
                   0x004e88                  _streamOut_Graphic_OLED
-                  0x004ed8                  _streamIn_I2C
-                  0x004edc                  _streamOut_I2C
-                  0x0053ca                  _Edit_Edit1_init
-                  0x0053d6                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
-                  0x0053f4                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
-                  0x005524                  _streamIn_t_ptr_to_float
-                  0x005560                  _streamIn_t_ptr_to_char
-                  0x00559a                  _streamIn_t_ptr_to_uint8_t
-                  0x0055d8                  _streamIn_t_ptr_to_uint16_t
-                  0x005614                  _streamIn_t_ptr_to_uint32_t
-                  0x005650                  _streamIn_t_ptr_to_uint64_t
-                  0x00568c                  _streamIn_t_ptr_to_int8_t
-                  0x0056ca                  _streamIn_t_ptr_to_int16_t
-                  0x005706                  _streamIn_t_ptr_to_int32_t
-                  0x005742                  _streamIn_t_ptr_to_int64_t
-                  0x00577e                  _streamIn_t_ptr_to_ascii
-                  0x0057be                  _sendDataToStream
-                  0x005ada                  _Graphics_OLED_init
-                  0x005b14                  _Graphics_OLED_poll
-                  0x005b20                  _Graphics_OLED_clear
-                  0x005b46                  _Graphics_OLED_pixel
-                  0x005bf4                  _Graphics_OLED_line
-                  0x005d40                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
-                  0x005d48                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
-                  0x005ef2                  _Graphics_OLED_print
-                  0x005f06                  _Graphics_OLED_printAt
-                  0x005f30                  _Init_I2C_Driver
-                  0x005f3c                  _getAvailable_out_count
-                  0x005f50                  _countI2cStreamIn
-                  0x005f58                  _getI2cStreamIn
-                  0x005f60                  _setI2cStreamOut
-                  0x005f6c                  _I2C_Begin_Transmision
-                  0x005f86                  _ini_I2C_IN
-                  0x005fb0                  _ini_I2C_OUT
-                  0x005fda                  _ini_I2C_OUT_FM
-                  0x005fe4                  _reset_I2C_FRAME
-                  0x005ff2                  _push_I2C_IN
-                  0x00602a                  _push_I2C_OUT
-                  0x00605a                  _pop_I2C_IN
-                  0x00607e                  _pop_I2C_OUT
-                  0x0060a2                  _pop_I2C_OUT_FM
-                  0x0060b2                  _i2cCloseWriteFrame
-                  0x0060f4                  _i2cOpenReadFrame
-                  0x006140                  _I2c_driver_callback_slave
-                  0x006180                  _I2c_driver_callback_master
-                  0x0061f0                  _SSD1322_OLED_sendCommand
-                  0x006200                  _SSD1322_OLED_sendData
-                  0x00620c                  _SSD1322_OLED_setColumn
-                  0x006222                  _SSD1322_OLED_setRow
-                  0x006238                  _SSD1322_OLED_init
-                  0x0062e0                  _SSD1322_OLED_clear
-                  0x00630e                  _SSD1322_OLED_refresh
-                  0x0063c8                  _SSD1322_OLED_setContrast
-                  0x0063d8                  _SSD1322_OLED_powerOn
-                  0x0063e4                  _SSD1322_OLED_powerOff
-                  0x006484                  _Keyboard_Pad_init
-                  0x0064cc                  _Keyboard_Pad_setMode
-                  0x0064da                  _Keyboard_Pad_poll
-                  0x006666                  _Keyboard_Nav_init
-                  0x0066ae                  _Keyboard_Nav_setMode
-                  0x0066bc                  _Keyboard_Nav_poll
-                  0x0067b4                  _streamPushCtr
-                  0x006802                  _streamPush
-                  0x00683c                  _streamPop
-                  0x006874                  _streamOpenWriteFrame
-                  0x0068b6                  _streamOpenReadFrame
-                  0x006902                  _streamReOpenReadFrame
-                  0x00691a                  _streamCloseReadFrame
-                  0x006944                  _pI2C
-                  0x006960                  _pI2C_ctrl
-                  0x00697c                  _pI2C_boot
-                  0x00699c                  _EMICBus_init
-                  0x0069aa                  _poll_EMICBus
-                  0x006b98                  _Init_Master_I2C2
-                  0x006c00                  _CollisionReset_I2C2
-                  0x006c08                  _OverflowReset_I2C2
-                  0x006c10                  _IsStartI2c2
-                  0x006c1c                  _IsCollisionDetectI2c2
-                  0x006c28                  _IsStopI2c2
-                  0x006c34                  _IsReceiveBufferFullI2c2
-                  0x006c40                  _IsDataOrAddressI2c2
-                  0x006c4c                  _IsReceiveOverflowI2c2
-                  0x006c58                  _Start_I2C2
-                  0x006c6a                  _Stop_I2C2
-                  0x006c7c                  _Write_I2C2
-                  0x006c88                  _Read_I2C2
-                  0x006c9c                  _onReset
-                  0x006cce                  _eI2C
-                  0x006d36                  _PMP_init
-                  0x006d46                  _PMP_write
-                  0x006d52                  _PMP_read
-                  0x006d68                  _PMP_isBusy
-                  0x006d74                  _initSystem
-                  0x006d82                  _main
-                  0x006da2                  _getSystemMilis
-                  0x006dac                  _callback
-                  0x006dbe                  _systemTimeInit
-                  0x006dc8                  ___delay32
-                  0x006de4                  _timer4_init
-                  0x006dfa                  _LEDs_Led1_init
-                  0x006e02                  _LEDs_Led2_init
+                  0x004ec0                  _streamIn_I2C
+                  0x004ec4                  _streamOut_I2C
+                  0x0053b2                  _Edit_Edit1_init
+                  0x0053be                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
+                  0x0053dc                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
+                  0x00550c                  _streamIn_t_ptr_to_float
+                  0x005548                  _streamIn_t_ptr_to_char
+                  0x005582                  _streamIn_t_ptr_to_uint8_t
+                  0x0055c0                  _streamIn_t_ptr_to_uint16_t
+                  0x0055fc                  _streamIn_t_ptr_to_uint32_t
+                  0x005638                  _streamIn_t_ptr_to_uint64_t
+                  0x005674                  _streamIn_t_ptr_to_int8_t
+                  0x0056b2                  _streamIn_t_ptr_to_int16_t
+                  0x0056ee                  _streamIn_t_ptr_to_int32_t
+                  0x00572a                  _streamIn_t_ptr_to_int64_t
+                  0x005766                  _streamIn_t_ptr_to_ascii
+                  0x0057a6                  _sendDataToStream
+                  0x005ac2                  _Graphics_OLED_init
+                  0x005afc                  _Graphics_OLED_poll
+                  0x005b08                  _Graphics_OLED_clear
+                  0x005b2e                  _Graphics_OLED_pixel
+                  0x005bdc                  _Graphics_OLED_line
+                  0x005d28                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
+                  0x005d30                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
+                  0x005eda                  _Graphics_OLED_print
+                  0x005eee                  _Graphics_OLED_printAt
+                  0x005f18                  _Init_I2C_Driver
+                  0x005f24                  _getAvailable_out_count
+                  0x005f38                  _countI2cStreamIn
+                  0x005f40                  _getI2cStreamIn
+                  0x005f48                  _setI2cStreamOut
+                  0x005f54                  _I2C_Begin_Transmision
+                  0x005f6e                  _ini_I2C_IN
+                  0x005f98                  _ini_I2C_OUT
+                  0x005fc2                  _ini_I2C_OUT_FM
+                  0x005fcc                  _reset_I2C_FRAME
+                  0x005fda                  _push_I2C_IN
+                  0x006012                  _push_I2C_OUT
+                  0x006042                  _pop_I2C_IN
+                  0x006066                  _pop_I2C_OUT
+                  0x00608a                  _pop_I2C_OUT_FM
+                  0x00609a                  _i2cCloseWriteFrame
+                  0x0060dc                  _i2cOpenReadFrame
+                  0x006128                  _I2c_driver_callback_slave
+                  0x006168                  _I2c_driver_callback_master
+                  0x0061d8                  _SSD1322_OLED_sendCommand
+                  0x0061e8                  _SSD1322_OLED_sendData
+                  0x0061f4                  _SSD1322_OLED_setColumn
+                  0x00620a                  _SSD1322_OLED_setRow
+                  0x006220                  _SSD1322_OLED_init
+                  0x0062c8                  _SSD1322_OLED_clear
+                  0x0062f6                  _SSD1322_OLED_refresh
+                  0x0063b0                  _SSD1322_OLED_setContrast
+                  0x0063c0                  _SSD1322_OLED_powerOn
+                  0x0063cc                  _SSD1322_OLED_powerOff
+                  0x00646c                  _Keyboard_Pad_init
+                  0x0064b4                  _Keyboard_Pad_setMode
+                  0x0064c2                  _Keyboard_Pad_poll
+                  0x00664e                  _Keyboard_Nav_init
+                  0x006696                  _Keyboard_Nav_setMode
+                  0x0066a4                  _Keyboard_Nav_poll
+                  0x00679c                  _streamPushCtr
+                  0x0067ea                  _streamPush
+                  0x006824                  _streamPop
+                  0x00685c                  _streamOpenWriteFrame
+                  0x00689e                  _streamOpenReadFrame
+                  0x0068ea                  _streamReOpenReadFrame
+                  0x006902                  _streamCloseReadFrame
+                  0x00692c                  _pI2C
+                  0x006948                  _pI2C_ctrl
+                  0x006964                  _pI2C_boot
+                  0x006984                  _EMICBus_init
+                  0x006992                  _poll_EMICBus
+                  0x006b80                  _Init_Master_I2C2
+                  0x006be8                  _CollisionReset_I2C2
+                  0x006bf0                  _OverflowReset_I2C2
+                  0x006bf8                  _IsStartI2c2
+                  0x006c04                  _IsCollisionDetectI2c2
+                  0x006c10                  _IsStopI2c2
+                  0x006c1c                  _IsReceiveBufferFullI2c2
+                  0x006c28                  _IsDataOrAddressI2c2
+                  0x006c34                  _IsReceiveOverflowI2c2
+                  0x006c40                  _Start_I2C2
+                  0x006c52                  _Stop_I2C2
+                  0x006c64                  _Write_I2C2
+                  0x006c70                  _Read_I2C2
+                  0x006c84                  _PMP_init
+                  0x006c94                  _PMP_write
+                  0x006ca0                  _PMP_read
+                  0x006cb6                  _PMP_isBusy
+                  0x006cc2                  _initSystem
+                  0x006cd0                  _main
+                  0x006cee                  _eI2C
+                  0x006d16                  _getSystemMilis
+                  0x006d20                  _callback
+                  0x006d32                  _systemTimeInit
+                  0x006d3c                  ___delay32
+                  0x006d58                  _timer4_init
+                  0x006d6e                  _LEDs_Led1_init
+                  0x006d76                  _LEDs_Led2_init
 
 External Symbols in Program Memory (by name):
 
-                  0x0053f4                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
-                  0x0053d6                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
-                  0x005d48                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
-                  0x005d40                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
-                  0x006c00                  _CollisionReset_I2C2
-                  0x00699c                  _EMICBus_init
-                  0x0053ca                  _Edit_Edit1_init
-                  0x005b20                  _Graphics_OLED_clear
-                  0x005ada                  _Graphics_OLED_init
-                  0x005bf4                  _Graphics_OLED_line
-                  0x005b46                  _Graphics_OLED_pixel
-                  0x005b14                  _Graphics_OLED_poll
-                  0x005ef2                  _Graphics_OLED_print
-                  0x005f06                  _Graphics_OLED_printAt
-                  0x005f6c                  _I2C_Begin_Transmision
-                  0x006180                  _I2c_driver_callback_master
-                  0x006140                  _I2c_driver_callback_slave
-                  0x005f30                  _Init_I2C_Driver
-                  0x006b98                  _Init_Master_I2C2
-                  0x006c1c                  _IsCollisionDetectI2c2
-                  0x006c40                  _IsDataOrAddressI2c2
-                  0x006c34                  _IsReceiveBufferFullI2c2
-                  0x006c4c                  _IsReceiveOverflowI2c2
-                  0x006c10                  _IsStartI2c2
-                  0x006c28                  _IsStopI2c2
-                  0x006666                  _Keyboard_Nav_init
-                  0x0066bc                  _Keyboard_Nav_poll
-                  0x0066ae                  _Keyboard_Nav_setMode
-                  0x006484                  _Keyboard_Pad_init
-                  0x0064da                  _Keyboard_Pad_poll
-                  0x0064cc                  _Keyboard_Pad_setMode
-                  0x006dfa                  _LEDs_Led1_init
-                  0x006e02                  _LEDs_Led2_init
-                  0x006c08                  _OverflowReset_I2C2
-                  0x006d36                  _PMP_init
-                  0x006d68                  _PMP_isBusy
-                  0x006d52                  _PMP_read
-                  0x006d46                  _PMP_write
-                  0x006c88                  _Read_I2C2
-                  0x0062e0                  _SSD1322_OLED_clear
-                  0x006238                  _SSD1322_OLED_init
-                  0x0063e4                  _SSD1322_OLED_powerOff
-                  0x0063d8                  _SSD1322_OLED_powerOn
-                  0x00630e                  _SSD1322_OLED_refresh
-                  0x0061f0                  _SSD1322_OLED_sendCommand
-                  0x006200                  _SSD1322_OLED_sendData
-                  0x00620c                  _SSD1322_OLED_setColumn
-                  0x0063c8                  _SSD1322_OLED_setContrast
-                  0x006222                  _SSD1322_OLED_setRow
-                  0x006c58                  _Start_I2C2
-                  0x006c6a                  _Stop_I2C2
-                  0x006c7c                  _Write_I2C2
+                  0x0053dc                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
+                  0x0053be                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
+                  0x005d30                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
+                  0x005d28                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
+                  0x006be8                  _CollisionReset_I2C2
+                  0x006984                  _EMICBus_init
+                  0x0053b2                  _Edit_Edit1_init
+                  0x005b08                  _Graphics_OLED_clear
+                  0x005ac2                  _Graphics_OLED_init
+                  0x005bdc                  _Graphics_OLED_line
+                  0x005b2e                  _Graphics_OLED_pixel
+                  0x005afc                  _Graphics_OLED_poll
+                  0x005eda                  _Graphics_OLED_print
+                  0x005eee                  _Graphics_OLED_printAt
+                  0x005f54                  _I2C_Begin_Transmision
+                  0x006168                  _I2c_driver_callback_master
+                  0x006128                  _I2c_driver_callback_slave
+                  0x005f18                  _Init_I2C_Driver
+                  0x006b80                  _Init_Master_I2C2
+                  0x006c04                  _IsCollisionDetectI2c2
+                  0x006c28                  _IsDataOrAddressI2c2
+                  0x006c1c                  _IsReceiveBufferFullI2c2
+                  0x006c34                  _IsReceiveOverflowI2c2
+                  0x006bf8                  _IsStartI2c2
+                  0x006c10                  _IsStopI2c2
+                  0x00664e                  _Keyboard_Nav_init
+                  0x0066a4                  _Keyboard_Nav_poll
+                  0x006696                  _Keyboard_Nav_setMode
+                  0x00646c                  _Keyboard_Pad_init
+                  0x0064c2                  _Keyboard_Pad_poll
+                  0x0064b4                  _Keyboard_Pad_setMode
+                  0x006d6e                  _LEDs_Led1_init
+                  0x006d76                  _LEDs_Led2_init
+                  0x006bf0                  _OverflowReset_I2C2
+                  0x006c84                  _PMP_init
+                  0x006cb6                  _PMP_isBusy
+                  0x006ca0                  _PMP_read
+                  0x006c94                  _PMP_write
+                  0x006c70                  _Read_I2C2
+                  0x0062c8                  _SSD1322_OLED_clear
+                  0x006220                  _SSD1322_OLED_init
+                  0x0063cc                  _SSD1322_OLED_powerOff
+                  0x0063c0                  _SSD1322_OLED_powerOn
+                  0x0062f6                  _SSD1322_OLED_refresh
+                  0x0061d8                  _SSD1322_OLED_sendCommand
+                  0x0061e8                  _SSD1322_OLED_sendData
+                  0x0061f4                  _SSD1322_OLED_setColumn
+                  0x0063b0                  _SSD1322_OLED_setContrast
+                  0x00620a                  _SSD1322_OLED_setRow
+                  0x006c40                  _Start_I2C2
+                  0x006c52                  _Stop_I2C2
+                  0x006c64                  _Write_I2C2
                   0x000360                  __DefaultInterrupt
                   0x00033a                  __MI2C2Interrupt
                   0x000314                  __SI2C2Interrupt
@@ -619,7 +618,7 @@ External Symbols in Program Memory (by name):
                   0x0004ec                  ___addsf3
                   0x0004ec                  ___addsf3x
                   0x0036f8                  ___cvt_u
-                  0x006dc8                  ___delay32
+                  0x006d3c                  ___delay32
                   0x003be4                  ___divdf3
                   0x000ccc                  ___divdi3
                   0x0006b6                  ___divsf3
@@ -720,70 +719,69 @@ External Symbols in Program Memory (by name):
                   0x000e7c                  _atoi
                   0x000edc                  _atol
                   0x000f44                  _atoll
-                  0x006dac                  _callback
+                  0x006d20                  _callback
                   0x004184                  _copysignl
-                  0x005f50                  _countI2cStreamIn
-                  0x006cce                  _eI2C
+                  0x005f38                  _countI2cStreamIn
+                  0x006cee                  _eI2C
                   0x0041b8                  _fabsl
                   0x0041ce                  _floorl
                   0x0042c8                  _fmodl
-                  0x005f3c                  _getAvailable_out_count
-                  0x005f58                  _getI2cStreamIn
-                  0x006da2                  _getSystemMilis
-                  0x0060b2                  _i2cCloseWriteFrame
-                  0x0060f4                  _i2cOpenReadFrame
-                  0x005f86                  _ini_I2C_IN
-                  0x005fb0                  _ini_I2C_OUT
-                  0x005fda                  _ini_I2C_OUT_FM
-                  0x006d74                  _initSystem
-                  0x006d82                  _main
+                  0x005f24                  _getAvailable_out_count
+                  0x005f40                  _getI2cStreamIn
+                  0x006d16                  _getSystemMilis
+                  0x00609a                  _i2cCloseWriteFrame
+                  0x0060dc                  _i2cOpenReadFrame
+                  0x005f6e                  _ini_I2C_IN
+                  0x005f98                  _ini_I2C_OUT
+                  0x005fc2                  _ini_I2C_OUT_FM
+                  0x006cc2                  _initSystem
+                  0x006cd0                  _main
                   0x002a3e                  _memcpy
                   0x000fa8                  _memset
-                  0x006c9c                  _onReset
-                  0x006944                  _pI2C
-                  0x00697c                  _pI2C_boot
-                  0x006960                  _pI2C_ctrl
-                  0x0069aa                  _poll_EMICBus
-                  0x00605a                  _pop_I2C_IN
-                  0x00607e                  _pop_I2C_OUT
-                  0x0060a2                  _pop_I2C_OUT_FM
-                  0x005ff2                  _push_I2C_IN
-                  0x00602a                  _push_I2C_OUT
-                  0x005fe4                  _reset_I2C_FRAME
+                  0x00692c                  _pI2C
+                  0x006964                  _pI2C_boot
+                  0x006948                  _pI2C_ctrl
+                  0x006992                  _poll_EMICBus
+                  0x006042                  _pop_I2C_IN
+                  0x006066                  _pop_I2C_OUT
+                  0x00608a                  _pop_I2C_OUT_FM
+                  0x005fda                  _push_I2C_IN
+                  0x006012                  _push_I2C_OUT
+                  0x005fcc                  _reset_I2C_FRAME
                   0x0045f4                  _scalbnf
                   0x004648                  _scalbnl
-                  0x0057be                  _sendDataToStream
-                  0x005f60                  _setI2cStreamOut
+                  0x0057a6                  _sendDataToStream
+                  0x005f48                  _setI2cStreamOut
                   0x001070                  _snprintf
                   0x003984                  _strcpy
-                  0x00691a                  _streamCloseReadFrame
-                  0x004ed8                  _streamIn_I2C
-                  0x00577e                  _streamIn_t_ptr_to_ascii
-                  0x005560                  _streamIn_t_ptr_to_char
-                  0x005524                  _streamIn_t_ptr_to_float
-                  0x0056ca                  _streamIn_t_ptr_to_int16_t
-                  0x005706                  _streamIn_t_ptr_to_int32_t
-                  0x005742                  _streamIn_t_ptr_to_int64_t
-                  0x00568c                  _streamIn_t_ptr_to_int8_t
-                  0x0055d8                  _streamIn_t_ptr_to_uint16_t
-                  0x005614                  _streamIn_t_ptr_to_uint32_t
-                  0x005650                  _streamIn_t_ptr_to_uint64_t
-                  0x00559a                  _streamIn_t_ptr_to_uint8_t
-                  0x0068b6                  _streamOpenReadFrame
-                  0x006874                  _streamOpenWriteFrame
+                  0x006902                  _streamCloseReadFrame
+                  0x004ec0                  _streamIn_I2C
+                  0x005766                  _streamIn_t_ptr_to_ascii
+                  0x005548                  _streamIn_t_ptr_to_char
+                  0x00550c                  _streamIn_t_ptr_to_float
+                  0x0056b2                  _streamIn_t_ptr_to_int16_t
+                  0x0056ee                  _streamIn_t_ptr_to_int32_t
+                  0x00572a                  _streamIn_t_ptr_to_int64_t
+                  0x005674                  _streamIn_t_ptr_to_int8_t
+                  0x0055c0                  _streamIn_t_ptr_to_uint16_t
+                  0x0055fc                  _streamIn_t_ptr_to_uint32_t
+                  0x005638                  _streamIn_t_ptr_to_uint64_t
+                  0x005582                  _streamIn_t_ptr_to_uint8_t
+                  0x00689e                  _streamOpenReadFrame
+                  0x00685c                  _streamOpenWriteFrame
                   0x004e88                  _streamOut_Graphic_OLED
-                  0x004edc                  _streamOut_I2C
-                  0x00683c                  _streamPop
-                  0x006802                  _streamPush
-                  0x0067b4                  _streamPushCtr
-                  0x006902                  _streamReOpenReadFrame
+                  0x004ec4                  _streamOut_I2C
+                  0x006824                  _streamPop
+                  0x0067ea                  _streamPush
+                  0x00679c                  _streamPushCtr
+                  0x0068ea                  _streamReOpenReadFrame
                   0x002a4c                  _strlen
                   0x00107c                  _strncmp
                   0x001104                  _strtod
                   0x0010fe                  _strtof
                   0x00110a                  _strtold
-                  0x006dbe                  _systemTimeInit
-                  0x006de4                  _timer4_init
+                  0x006d32                  _systemTimeInit
+                  0x006d58                  _timer4_init
                   0x002a7c                  _tolower
                   0x003992                  _toupper
                   0x0024be                  _vfprintf
@@ -2360,140 +2358,139 @@ __xc_reference_data
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/main.o
 
-.const              0xc6a8        0x838 load address 0x0046a8  
+.const              0xc6a8        0x820 load address 0x0046a8  
  .const             0xc6a8        0x7f0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o
                     0xce88                  _streamOut_Graphic_OLED
- .const             0xce98         0x28 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
- .const             0xcec0          0xc /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Pad.o
- .const             0xcecc          0xc /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Nav.o
- .const             0xced8          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2_driver.o
-                    0xced8                  _streamIn_I2C
-                    0xcedc                  _streamOut_I2C
+ .const             0xce98         0x10 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
+ .const             0xcea8          0xc /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Pad.o
+ .const             0xceb4          0xc /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Nav.o
+ .const             0xcec0          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2_driver.o
+                    0xcec0                  _streamIn_I2C
+                    0xcec4                  _streamOut_I2C
 
-.text             0x004ee0       0x1bae
- .text            0x004ee0        0x644 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o
-                  0x0053ca                  _Edit_Edit1_init
-                  0x0053d6                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
-                  0x0053f4                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
- .text            0x005524        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/streamIn.o
-                  0x005524                  _streamIn_t_ptr_to_float
-                  0x005560                  _streamIn_t_ptr_to_char
-                  0x00559a                  _streamIn_t_ptr_to_uint8_t
-                  0x0055d8                  _streamIn_t_ptr_to_uint16_t
-                  0x005614                  _streamIn_t_ptr_to_uint32_t
-                  0x005650                  _streamIn_t_ptr_to_uint64_t
-                  0x00568c                  _streamIn_t_ptr_to_int8_t
-                  0x0056ca                  _streamIn_t_ptr_to_int16_t
-                  0x005706                  _streamIn_t_ptr_to_int32_t
-                  0x005742                  _streamIn_t_ptr_to_int64_t
-                  0x00577e                  _streamIn_t_ptr_to_ascii
-                  0x0057be                  _sendDataToStream
- .text            0x005ada        0x456 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o
-                  0x005ada                  _Graphics_OLED_init
-                  0x005b14                  _Graphics_OLED_poll
-                  0x005b20                  _Graphics_OLED_clear
-                  0x005b46                  _Graphics_OLED_pixel
-                  0x005bf4                  _Graphics_OLED_line
-                  0x005d40                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
-                  0x005d48                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
-                  0x005ef2                  _Graphics_OLED_print
-                  0x005f06                  _Graphics_OLED_printAt
- .text            0x005f30        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2_driver.o
-                  0x005f30                  _Init_I2C_Driver
-                  0x005f3c                  _getAvailable_out_count
-                  0x005f50                  _countI2cStreamIn
-                  0x005f58                  _getI2cStreamIn
-                  0x005f60                  _setI2cStreamOut
-                  0x005f6c                  _I2C_Begin_Transmision
-                  0x005f86                  _ini_I2C_IN
-                  0x005fb0                  _ini_I2C_OUT
-                  0x005fda                  _ini_I2C_OUT_FM
-                  0x005fe4                  _reset_I2C_FRAME
-                  0x005ff2                  _push_I2C_IN
-                  0x00602a                  _push_I2C_OUT
-                  0x00605a                  _pop_I2C_IN
-                  0x00607e                  _pop_I2C_OUT
-                  0x0060a2                  _pop_I2C_OUT_FM
-                  0x0060b2                  _i2cCloseWriteFrame
-                  0x0060f4                  _i2cOpenReadFrame
-                  0x006140                  _I2c_driver_callback_slave
-                  0x006180                  _I2c_driver_callback_master
- .text            0x0061f0        0x200 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/SSD1322_OLED.o
-                  0x0061f0                  _SSD1322_OLED_sendCommand
-                  0x006200                  _SSD1322_OLED_sendData
-                  0x00620c                  _SSD1322_OLED_setColumn
-                  0x006222                  _SSD1322_OLED_setRow
-                  0x006238                  _SSD1322_OLED_init
-                  0x0062e0                  _SSD1322_OLED_clear
-                  0x00630e                  _SSD1322_OLED_refresh
-                  0x0063c8                  _SSD1322_OLED_setContrast
-                  0x0063d8                  _SSD1322_OLED_powerOn
-                  0x0063e4                  _SSD1322_OLED_powerOff
- .text            0x0063f0        0x1e2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Pad.o
-                  0x006484                  _Keyboard_Pad_init
-                  0x0064cc                  _Keyboard_Pad_setMode
-                  0x0064da                  _Keyboard_Pad_poll
- .text            0x0065d2        0x1e2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Nav.o
-                  0x006666                  _Keyboard_Nav_init
-                  0x0066ae                  _Keyboard_Nav_setMode
-                  0x0066bc                  _Keyboard_Nav_poll
- .text            0x0067b4        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/stream.o
-                  0x0067b4                  _streamPushCtr
-                  0x006802                  _streamPush
-                  0x00683c                  _streamPop
-                  0x006874                  _streamOpenWriteFrame
-                  0x0068b6                  _streamOpenReadFrame
-                  0x006902                  _streamReOpenReadFrame
-                  0x00691a                  _streamCloseReadFrame
- .text            0x006944        0x14a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/EMICBus.o
-                  0x006944                  _pI2C
-                  0x006960                  _pI2C_ctrl
-                  0x00697c                  _pI2C_boot
-                  0x00699c                  _EMICBus_init
-                  0x0069aa                  _poll_EMICBus
+.text             0x004ec8       0x1bae
+ .text            0x004ec8        0x644 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o
+                  0x0053b2                  _Edit_Edit1_init
+                  0x0053be                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inGet
+                  0x0053dc                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Edit_Edit1.o:_ed_inCount
+ .text            0x00550c        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/streamIn.o
+                  0x00550c                  _streamIn_t_ptr_to_float
+                  0x005548                  _streamIn_t_ptr_to_char
+                  0x005582                  _streamIn_t_ptr_to_uint8_t
+                  0x0055c0                  _streamIn_t_ptr_to_uint16_t
+                  0x0055fc                  _streamIn_t_ptr_to_uint32_t
+                  0x005638                  _streamIn_t_ptr_to_uint64_t
+                  0x005674                  _streamIn_t_ptr_to_int8_t
+                  0x0056b2                  _streamIn_t_ptr_to_int16_t
+                  0x0056ee                  _streamIn_t_ptr_to_int32_t
+                  0x00572a                  _streamIn_t_ptr_to_int64_t
+                  0x005766                  _streamIn_t_ptr_to_ascii
+                  0x0057a6                  _sendDataToStream
+ .text            0x005ac2        0x456 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o
+                  0x005ac2                  _Graphics_OLED_init
+                  0x005afc                  _Graphics_OLED_poll
+                  0x005b08                  _Graphics_OLED_clear
+                  0x005b2e                  _Graphics_OLED_pixel
+                  0x005bdc                  _Graphics_OLED_line
+                  0x005d28                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
+                  0x005d30                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
+                  0x005eda                  _Graphics_OLED_print
+                  0x005eee                  _Graphics_OLED_printAt
+ .text            0x005f18        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2_driver.o
+                  0x005f18                  _Init_I2C_Driver
+                  0x005f24                  _getAvailable_out_count
+                  0x005f38                  _countI2cStreamIn
+                  0x005f40                  _getI2cStreamIn
+                  0x005f48                  _setI2cStreamOut
+                  0x005f54                  _I2C_Begin_Transmision
+                  0x005f6e                  _ini_I2C_IN
+                  0x005f98                  _ini_I2C_OUT
+                  0x005fc2                  _ini_I2C_OUT_FM
+                  0x005fcc                  _reset_I2C_FRAME
+                  0x005fda                  _push_I2C_IN
+                  0x006012                  _push_I2C_OUT
+                  0x006042                  _pop_I2C_IN
+                  0x006066                  _pop_I2C_OUT
+                  0x00608a                  _pop_I2C_OUT_FM
+                  0x00609a                  _i2cCloseWriteFrame
+                  0x0060dc                  _i2cOpenReadFrame
+                  0x006128                  _I2c_driver_callback_slave
+                  0x006168                  _I2c_driver_callback_master
+ .text            0x0061d8        0x200 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/SSD1322_OLED.o
+                  0x0061d8                  _SSD1322_OLED_sendCommand
+                  0x0061e8                  _SSD1322_OLED_sendData
+                  0x0061f4                  _SSD1322_OLED_setColumn
+                  0x00620a                  _SSD1322_OLED_setRow
+                  0x006220                  _SSD1322_OLED_init
+                  0x0062c8                  _SSD1322_OLED_clear
+                  0x0062f6                  _SSD1322_OLED_refresh
+                  0x0063b0                  _SSD1322_OLED_setContrast
+                  0x0063c0                  _SSD1322_OLED_powerOn
+                  0x0063cc                  _SSD1322_OLED_powerOff
+ .text            0x0063d8        0x1e2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Pad.o
+                  0x00646c                  _Keyboard_Pad_init
+                  0x0064b4                  _Keyboard_Pad_setMode
+                  0x0064c2                  _Keyboard_Pad_poll
+ .text            0x0065ba        0x1e2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Keyboard_Nav.o
+                  0x00664e                  _Keyboard_Nav_init
+                  0x006696                  _Keyboard_Nav_setMode
+                  0x0066a4                  _Keyboard_Nav_poll
+ .text            0x00679c        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/stream.o
+                  0x00679c                  _streamPushCtr
+                  0x0067ea                  _streamPush
+                  0x006824                  _streamPop
+                  0x00685c                  _streamOpenWriteFrame
+                  0x00689e                  _streamOpenReadFrame
+                  0x0068ea                  _streamReOpenReadFrame
+                  0x006902                  _streamCloseReadFrame
+ .text            0x00692c        0x14a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/EMICBus.o
+                  0x00692c                  _pI2C
+                  0x006948                  _pI2C_ctrl
+                  0x006964                  _pI2C_boot
+                  0x006984                  _EMICBus_init
+                  0x006992                  _poll_EMICBus
 
-.dinit            0x006a8e        0x10a
- .dinit           0x006a8e        0x10a data_init
+.dinit            0x006a76        0x10a
+ .dinit           0x006a76        0x10a data_init
 
-.text             0x006b98        0x230
- .text            0x006b98        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2.o
-                  0x006b98                  _Init_Master_I2C2
-                  0x006c00                  _CollisionReset_I2C2
-                  0x006c08                  _OverflowReset_I2C2
-                  0x006c10                  _IsStartI2c2
-                  0x006c1c                  _IsCollisionDetectI2c2
-                  0x006c28                  _IsStopI2c2
-                  0x006c34                  _IsReceiveBufferFullI2c2
-                  0x006c40                  _IsDataOrAddressI2c2
-                  0x006c4c                  _IsReceiveOverflowI2c2
-                  0x006c58                  _Start_I2C2
-                  0x006c6a                  _Stop_I2C2
-                  0x006c7c                  _Write_I2C2
-                  0x006c88                  _Read_I2C2
- .text            0x006c9c         0x9a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
-                  0x006c9c                  _onReset
-                  0x006cce                  _eI2C
- .text            0x006d36         0x3e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/pmp.o
-                  0x006d36                  _PMP_init
-                  0x006d46                  _PMP_write
-                  0x006d52                  _PMP_read
-                  0x006d68                  _PMP_isBusy
- .text            0x006d74         0x2e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/main.o
-                  0x006d74                  _initSystem
-                  0x006d82                  _main
- .text            0x006da2         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/systemTimer.o
-                  0x006da2                  _getSystemMilis
-                  0x006dac                  _callback
-                  0x006dbe                  _systemTimeInit
+.text             0x006b80        0x1bc
+ .text            0x006b80        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2.o
+                  0x006b80                  _Init_Master_I2C2
+                  0x006be8                  _CollisionReset_I2C2
+                  0x006bf0                  _OverflowReset_I2C2
+                  0x006bf8                  _IsStartI2c2
+                  0x006c04                  _IsCollisionDetectI2c2
+                  0x006c10                  _IsStopI2c2
+                  0x006c1c                  _IsReceiveBufferFullI2c2
+                  0x006c28                  _IsDataOrAddressI2c2
+                  0x006c34                  _IsReceiveOverflowI2c2
+                  0x006c40                  _Start_I2C2
+                  0x006c52                  _Stop_I2C2
+                  0x006c64                  _Write_I2C2
+                  0x006c70                  _Read_I2C2
+ .text            0x006c84         0x3e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/pmp.o
+                  0x006c84                  _PMP_init
+                  0x006c94                  _PMP_write
+                  0x006ca0                  _PMP_read
+                  0x006cb6                  _PMP_isBusy
+ .text            0x006cc2         0x2c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/main.o
+                  0x006cc2                  _initSystem
+                  0x006cd0                  _main
+ .text            0x006cee         0x28 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
+                  0x006cee                  _eI2C
+ .text            0x006d16         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/systemTimer.o
+                  0x006d16                  _getSystemMilis
+                  0x006d20                  _callback
+                  0x006d32                  _systemTimeInit
 
-.init.delay32     0x006dc8         0x1c
- .init.delay32    0x006dc8         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
-                  0x006dc8                  ___delay32
+.init.delay32     0x006d3c         0x1c
+ .init.delay32    0x006d3c         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
+                  0x006d3c                  ___delay32
 
-.text             0x006de4         0x26
- .text            0x006de4         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/timer.o
-                  0x006de4                  _timer4_init
- .text            0x006dfa          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led1.o
-                  0x006dfa                  _LEDs_Led1_init
- .text            0x006e02          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led2.o
-                  0x006e02                  _LEDs_Led2_init
+.text             0x006d58         0x26
+ .text            0x006d58         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/timer.o
+                  0x006d58                  _timer4_init
+ .text            0x006d6e          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led1.o
+                  0x006d6e                  _LEDs_Led1_init
+ .text            0x006d76          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led2.o
+                  0x006d76                  _LEDs_Led2_init

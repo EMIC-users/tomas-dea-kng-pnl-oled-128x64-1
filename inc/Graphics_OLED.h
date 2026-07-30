@@ -47,6 +47,7 @@ void Graphics_OLED_poll(void);
 
 /*==================[public API]============================================*/
 
+void Graphics_OLED_clear(void);
 
 
 
