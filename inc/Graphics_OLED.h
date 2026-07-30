@@ -47,10 +47,12 @@ void Graphics_OLED_poll(void);
 
 /*==================[public API]============================================*/
 
+void Graphics_OLED_clear(void);
 
 
 
 
+void Graphics_OLED_printAt(uint8_t x, uint8_t y, uint8_t fontId, char* format, ...);
 
 
 
