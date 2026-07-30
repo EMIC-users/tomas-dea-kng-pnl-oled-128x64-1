@@ -22,6 +22,7 @@ void Keyboard_Pad_init(void);
 void Keyboard_Pad_poll(void);
 
 
+extern void Keyboard_Pad_onPress(uint8_t key);
 
 
 /*==================[end of file]============================================*/

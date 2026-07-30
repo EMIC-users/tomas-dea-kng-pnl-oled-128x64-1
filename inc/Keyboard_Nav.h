@@ -22,6 +22,7 @@ void Keyboard_Nav_init(void);
 void Keyboard_Nav_poll(void);
 
 
+extern void Keyboard_Nav_onPress(uint8_t key);
 
 
 /*==================[end of file]============================================*/

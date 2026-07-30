@@ -44,4 +44,18 @@ void eI2C(char* tag, const streamIn_t* const msg)
 }
 
 
+void Keyboard_Nav_onPress(uint8_t key)
+{
+    pI2C("TECLANAV\t%u", key);
+    Graphics_OLED_printAt(0, 54, 1, "TECLANAV:%u   ", key);
+}
+
+
+void Keyboard_Pad_onPress(uint8_t key)
+{
+    pI2C("TECLAPAD\t%u", key);
+    Graphics_OLED_printAt(0, 54, 1, "TECLAPAD:%u   ", key);
+}
+
+
 

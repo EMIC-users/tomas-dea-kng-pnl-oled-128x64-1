@@ -14,6 +14,8 @@
 /* Function Prototypes */
 void onReset();
 void eI2C(char* tag, const streamIn_t* const msg);
+void Keyboard_Nav_onPress(uint8_t key);
+void Keyboard_Pad_onPress(uint8_t key);
 
 #endif /* USERFNCFILE_H */
 
