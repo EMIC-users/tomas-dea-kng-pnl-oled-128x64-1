@@ -12,7 +12,6 @@
 #include "streamIn.h"
 
 /* Function Prototypes */
-void onReset();
 void eI2C(char* tag, const streamIn_t* const msg);
 
 #endif /* USERFNCFILE_H */

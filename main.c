@@ -27,7 +27,6 @@ int main(void)
 	Keyboard_Pad_init();
 	Keyboard_Nav_init();
 	EMICBus_init();
-	onReset();
 	do
 	{
 		Graphics_OLED_poll();

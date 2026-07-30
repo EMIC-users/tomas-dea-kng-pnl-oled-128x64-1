@@ -262,11 +262,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                      0x46a8               0x838           0xc54  (3156)
 .text                       0x4ee0              0x1bae          0x2985  (10629)
 .dinit                      0x6a8e               0x10a           0x18f  (399)
-.text                       0x6b98               0x212           0x31b  (795)
-.init.delay32               0x6daa                0x1c            0x2a  (42)
-.text                       0x6dc6                0x26            0x39  (57)
+.text                       0x6b98               0x230           0x348  (840)
+.init.delay32               0x6dc8                0x1c            0x2a  (42)
+.text                       0x6de4                0x26            0x39  (57)
 
-                 Total "program" memory used (bytes):         0xa1e2  (41442) 63%
+                 Total "program" memory used (bytes):         0xa20f  (41487) 63%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -542,20 +542,20 @@ External Symbols in Program Memory (by address):
                   0x006c7c                  _Write_I2C2
                   0x006c88                  _Read_I2C2
                   0x006c9c                  _onReset
-                  0x006cc2                  _eI2C
-                  0x006d18                  _PMP_init
-                  0x006d28                  _PMP_write
-                  0x006d34                  _PMP_read
-                  0x006d4a                  _PMP_isBusy
-                  0x006d56                  _initSystem
-                  0x006d64                  _main
-                  0x006d84                  _getSystemMilis
-                  0x006d8e                  _callback
-                  0x006da0                  _systemTimeInit
-                  0x006daa                  ___delay32
-                  0x006dc6                  _timer4_init
-                  0x006ddc                  _LEDs_Led1_init
-                  0x006de4                  _LEDs_Led2_init
+                  0x006cce                  _eI2C
+                  0x006d36                  _PMP_init
+                  0x006d46                  _PMP_write
+                  0x006d52                  _PMP_read
+                  0x006d68                  _PMP_isBusy
+                  0x006d74                  _initSystem
+                  0x006d82                  _main
+                  0x006da2                  _getSystemMilis
+                  0x006dac                  _callback
+                  0x006dbe                  _systemTimeInit
+                  0x006dc8                  ___delay32
+                  0x006de4                  _timer4_init
+                  0x006dfa                  _LEDs_Led1_init
+                  0x006e02                  _LEDs_Led2_init
 
 External Symbols in Program Memory (by name):
 
@@ -590,13 +590,13 @@ External Symbols in Program Memory (by name):
                   0x006484                  _Keyboard_Pad_init
                   0x0064da                  _Keyboard_Pad_poll
                   0x0064cc                  _Keyboard_Pad_setMode
-                  0x006ddc                  _LEDs_Led1_init
-                  0x006de4                  _LEDs_Led2_init
+                  0x006dfa                  _LEDs_Led1_init
+                  0x006e02                  _LEDs_Led2_init
                   0x006c08                  _OverflowReset_I2C2
-                  0x006d18                  _PMP_init
-                  0x006d4a                  _PMP_isBusy
-                  0x006d34                  _PMP_read
-                  0x006d28                  _PMP_write
+                  0x006d36                  _PMP_init
+                  0x006d68                  _PMP_isBusy
+                  0x006d52                  _PMP_read
+                  0x006d46                  _PMP_write
                   0x006c88                  _Read_I2C2
                   0x0062e0                  _SSD1322_OLED_clear
                   0x006238                  _SSD1322_OLED_init
@@ -619,7 +619,7 @@ External Symbols in Program Memory (by name):
                   0x0004ec                  ___addsf3
                   0x0004ec                  ___addsf3x
                   0x0036f8                  ___cvt_u
-                  0x006daa                  ___delay32
+                  0x006dc8                  ___delay32
                   0x003be4                  ___divdf3
                   0x000ccc                  ___divdi3
                   0x0006b6                  ___divsf3
@@ -720,23 +720,23 @@ External Symbols in Program Memory (by name):
                   0x000e7c                  _atoi
                   0x000edc                  _atol
                   0x000f44                  _atoll
-                  0x006d8e                  _callback
+                  0x006dac                  _callback
                   0x004184                  _copysignl
                   0x005f50                  _countI2cStreamIn
-                  0x006cc2                  _eI2C
+                  0x006cce                  _eI2C
                   0x0041b8                  _fabsl
                   0x0041ce                  _floorl
                   0x0042c8                  _fmodl
                   0x005f3c                  _getAvailable_out_count
                   0x005f58                  _getI2cStreamIn
-                  0x006d84                  _getSystemMilis
+                  0x006da2                  _getSystemMilis
                   0x0060b2                  _i2cCloseWriteFrame
                   0x0060f4                  _i2cOpenReadFrame
                   0x005f86                  _ini_I2C_IN
                   0x005fb0                  _ini_I2C_OUT
                   0x005fda                  _ini_I2C_OUT_FM
-                  0x006d56                  _initSystem
-                  0x006d64                  _main
+                  0x006d74                  _initSystem
+                  0x006d82                  _main
                   0x002a3e                  _memcpy
                   0x000fa8                  _memset
                   0x006c9c                  _onReset
@@ -782,8 +782,8 @@ External Symbols in Program Memory (by name):
                   0x001104                  _strtod
                   0x0010fe                  _strtof
                   0x00110a                  _strtold
-                  0x006da0                  _systemTimeInit
-                  0x006dc6                  _timer4_init
+                  0x006dbe                  _systemTimeInit
+                  0x006de4                  _timer4_init
                   0x002a7c                  _tolower
                   0x003992                  _toupper
                   0x0024be                  _vfprintf
@@ -2455,7 +2455,7 @@ __xc_reference_data
 .dinit            0x006a8e        0x10a
  .dinit           0x006a8e        0x10a data_init
 
-.text             0x006b98        0x212
+.text             0x006b98        0x230
  .text            0x006b98        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/I2C2.o
                   0x006b98                  _Init_Master_I2C2
                   0x006c00                  _CollisionReset_I2C2
@@ -2470,30 +2470,30 @@ __xc_reference_data
                   0x006c6a                  _Stop_I2C2
                   0x006c7c                  _Write_I2C2
                   0x006c88                  _Read_I2C2
- .text            0x006c9c         0x7c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
+ .text            0x006c9c         0x9a /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
                   0x006c9c                  _onReset
-                  0x006cc2                  _eI2C
- .text            0x006d18         0x3e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/pmp.o
-                  0x006d18                  _PMP_init
-                  0x006d28                  _PMP_write
-                  0x006d34                  _PMP_read
-                  0x006d4a                  _PMP_isBusy
- .text            0x006d56         0x2e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/main.o
-                  0x006d56                  _initSystem
-                  0x006d64                  _main
- .text            0x006d84         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/systemTimer.o
-                  0x006d84                  _getSystemMilis
-                  0x006d8e                  _callback
-                  0x006da0                  _systemTimeInit
+                  0x006cce                  _eI2C
+ .text            0x006d36         0x3e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/pmp.o
+                  0x006d36                  _PMP_init
+                  0x006d46                  _PMP_write
+                  0x006d52                  _PMP_read
+                  0x006d68                  _PMP_isBusy
+ .text            0x006d74         0x2e /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/main.o
+                  0x006d74                  _initSystem
+                  0x006d82                  _main
+ .text            0x006da2         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/systemTimer.o
+                  0x006da2                  _getSystemMilis
+                  0x006dac                  _callback
+                  0x006dbe                  _systemTimeInit
 
-.init.delay32     0x006daa         0x1c
- .init.delay32    0x006daa         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
-                  0x006daa                  ___delay32
+.init.delay32     0x006dc8         0x1c
+ .init.delay32    0x006dc8         0x1c /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(delay32.Meo)
+                  0x006dc8                  ___delay32
 
-.text             0x006dc6         0x26
- .text            0x006dc6         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/timer.o
-                  0x006dc6                  _timer4_init
- .text            0x006ddc          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led1.o
-                  0x006ddc                  _LEDs_Led1_init
- .text            0x006de4          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led2.o
-                  0x006de4                  _LEDs_Led2_init
+.text             0x006de4         0x26
+ .text            0x006de4         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/timer.o
+                  0x006de4                  _timer4_init
+ .text            0x006dfa          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led1.o
+                  0x006dfa                  _LEDs_Led1_init
+ .text            0x006e02          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/led_Led2.o
+                  0x006e02                  _LEDs_Led2_init
