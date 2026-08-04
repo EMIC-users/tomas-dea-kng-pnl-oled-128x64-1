@@ -34,7 +34,7 @@ void MenuScr(void)
     Graphics_OLED_line(0, 13, 127, 13);
     Graphics_OLED_rect(4, 22, 119, 16);
     Graphics_OLED_printAt(12, 27, 0, "ARRANCAR MOTOR");
-    Graphics_OLED_printAt(6, 52, 0, "OK=ENTRAR   X=SALIR");
+    Graphics_OLED_printAt(6, 52, 0, "X=SALIR   OK=ENTRAR");
 }
 
 
@@ -138,15 +138,15 @@ void Keyboard_Nav_onPress(uint8_t key)
         case 3:
             if (key == 130)
             {
-                opcion = 0;
-                ConfirmScr();
-                Graphics_OLED_rect(74, 26, 44, 20);
-            }
-            if (key == 131)
-            {
                 opcion = 1;
                 ConfirmScr();
                 Graphics_OLED_rect(10, 26, 44, 20);
+            }
+            if (key == 131)
+            {
+                opcion = 0;
+                ConfirmScr();
+                Graphics_OLED_rect(74, 26, 44, 20);
             }
             break;
     }
