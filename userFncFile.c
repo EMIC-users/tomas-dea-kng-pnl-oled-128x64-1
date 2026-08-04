@@ -50,46 +50,6 @@ void ConfirmScr(void)
 }
 
 
-void MainScr1(void)
-{
-    Graphics_OLED_clear();
-    Graphics_OLED_line(0, 0, 127, 0);
-    Graphics_OLED_line(0, 63, 127, 63);
-    Graphics_OLED_line(0, 0, 0, 63);
-    Graphics_OLED_line(127, 0, 127, 63);
-    Graphics_OLED_line(0, 31, 127, 31);
-    Graphics_OLED_line(63, 0, 63, 63);
-    Graphics_OLED_printAt(5, 3, 0, "MOTOR");
-    Graphics_OLED_bindAt(20, 14, 1, &rpmMotor, 255, "%4d");
-    Graphics_OLED_printAt(67, 3, 0, "REF");
-    Graphics_OLED_bindAt(84, 14, 1, &rpmRef, 255, "%4d");
-    Graphics_OLED_printAt(5, 36, 0, "TOMA");
-    Graphics_OLED_bindAt(20, 47, 1, &rpmToma, 255, "%4d");
-    Graphics_OLED_printAt(69, 36, 0, "AIB");
-    Graphics_OLED_bindAt(84, 47, 1, &rpmAib, 255, "%4d");
-}
-
-
-void MainScr2(void)
-{
-    Graphics_OLED_clear();
-    Graphics_OLED_line(0, 0, 127, 0);
-    Graphics_OLED_line(0, 63, 127, 63);
-    Graphics_OLED_line(0, 0, 0, 63);
-    Graphics_OLED_line(127, 0, 127, 63);
-    Graphics_OLED_line(0, 31, 127, 31);
-    Graphics_OLED_line(63, 0, 63, 63);
-    Graphics_OLED_printAt(5, 3, 0, "MARIPOSA");
-    Graphics_OLED_bindAt(24, 14, 1, &pa, 255, "%3d");
-    Graphics_OLED_printAt(67, 3, 0, "PRES PSI");
-    Graphics_OLED_bindAt(88, 14, 1, &pres, 255, "%3d");
-    Graphics_OLED_printAt(5, 36, 0, "TEMP C");
-    Graphics_OLED_bindAt(24, 47, 1, &temp, 255, "%3d");
-    Graphics_OLED_printAt(69, 36, 0, "ESTADO");
-    Graphics_OLED_printAt(66, 48, 0, "MARCHA TDF");
-}
-
-
 void onReset()
 {
     LEDs_Led1_state(1);
@@ -180,6 +140,45 @@ void eI2C(char* tag, const streamIn_t* const msg)
     {
         /* default case - no action */
     }
+}
+
+
+void MainScr1(void)
+{
+    Graphics_OLED_clear();
+    Graphics_OLED_line(0, 0, 127, 0);
+    Graphics_OLED_line(0, 63, 127, 63);
+    Graphics_OLED_line(0, 0, 0, 63);
+    Graphics_OLED_line(127, 0, 127, 63);
+    Graphics_OLED_line(0, 31, 127, 31);
+    Graphics_OLED_line(63, 0, 63, 63);
+    Graphics_OLED_printAt(5, 3, 0, "MOTOR");
+    Graphics_OLED_bindAt(20, 14, 1, &rpmMotor, 1, "%4u");
+    Graphics_OLED_printAt(67, 3, 0, "REF");
+    Graphics_OLED_bindAt(84, 14, 1, &rpmRef, 1, "%4u");
+    Graphics_OLED_printAt(5, 36, 0, "TOMA");
+    Graphics_OLED_bindAt(20, 47, 1, &rpmToma, 1, "%4u");
+    Graphics_OLED_printAt(69, 36, 0, "AIB");
+    Graphics_OLED_bindAt(84, 47, 1, &rpmAib, 1, "%4u");
+}
+
+
+void MainScr2(void)
+{
+    Graphics_OLED_clear();
+    Graphics_OLED_line(0, 0, 127, 0);
+    Graphics_OLED_line(0, 63, 127, 63);
+    Graphics_OLED_line(0, 0, 0, 63);
+    Graphics_OLED_line(127, 0, 127, 63);
+    Graphics_OLED_line(0, 31, 127, 31);
+    Graphics_OLED_line(63, 0, 63, 63);
+    Graphics_OLED_printAt(5, 3, 0, "MARIPOSA");
+    Graphics_OLED_bindAt(24, 14, 1, &pa, 1, "%3u");
+    Graphics_OLED_printAt(67, 3, 0, "PRES PSI");
+    Graphics_OLED_bindAt(88, 14, 1, &pres, 1, "%3u");
+    Graphics_OLED_printAt(5, 36, 0, "TEMP C");
+    Graphics_OLED_bindAt(24, 47, 1, &temp, 1, "%3u");
+    Graphics_OLED_printAt(69, 36, 0, "ESTADO");
 }
 
 
