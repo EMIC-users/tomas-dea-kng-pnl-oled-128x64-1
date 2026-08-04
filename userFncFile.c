@@ -538,6 +538,7 @@ void Keyboard_Pad_onPress(uint8_t key)
                 }
                 else
                 {
+                    rpmRef = edit;
                     pI2C("RPMREF\t%u", edit);
                 }
                 pantalla = 0;
@@ -615,7 +616,14 @@ void eI2C(char* tag, const streamIn_t* const msg)
                     Graphics_OLED_printAt(66, 48, 0, "ARRANCANDO");
                     break;
                 case 2:
-                    Graphics_OLED_printAt(66, 48, 0, "EN MARCHA ");
+                    if (tdfEst == 1)
+                    {
+                        Graphics_OLED_printAt(66, 48, 0, "MARCHA TDF");
+                    }
+                    else
+                    {
+                        Graphics_OLED_printAt(66, 48, 0, "EN MARCHA ");
+                    }
                     break;
                 case 3:
                     Graphics_OLED_printAt(66, 48, 0, "PARANDO   ");
