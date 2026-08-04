@@ -14,8 +14,9 @@
 /* Function Prototypes */
 void MainScr1(void);
 void MainScr2(void);
-void MenuScr(void);
 void ConfirmScr(void);
+void MenuScr(void);
+void EditScr(void);
 void onReset();
 void Keyboard_Nav_onPress(uint8_t key);
 void Keyboard_Pad_onPress(uint8_t key);
