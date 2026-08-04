@@ -26,17 +26,7 @@ uint8_t tdf = 0;
 uint8_t pantalla = 0;
 uint8_t opcion = 0;
 uint8_t estado = 0;
-
-void MenuScr(void)
-{
-    Graphics_OLED_clear();
-    Graphics_OLED_printAt(44, 3, 0, "MENU");
-    Graphics_OLED_line(0, 13, 127, 13);
-    Graphics_OLED_rect(4, 22, 119, 16);
-    Graphics_OLED_printAt(12, 27, 0, "ARRANCAR MOTOR");
-    Graphics_OLED_printAt(6, 52, 0, "X=SALIR   OK=ENTRAR");
-}
-
+uint8_t opcMenu = 0;
 
 void MainScr1(void)
 {
@@ -77,10 +67,21 @@ void MainScr2(void)
 }
 
 
+void MenuScr(void)
+{
+    Graphics_OLED_clear();
+    Graphics_OLED_printAt(44, 3, 0, "MENU");
+    Graphics_OLED_line(0, 13, 127, 13);
+    Graphics_OLED_printAt(10, 19, 0, "ARRANCAR MOTOR");
+    Graphics_OLED_printAt(10, 31, 0, "PARAR MOTOR");
+    Graphics_OLED_printAt(10, 43, 0, "SALIR DE FALLO");
+    Graphics_OLED_printAt(6, 54, 0, "X=SALIR   OK=ENTRAR");
+}
+
+
 void ConfirmScr(void)
 {
     Graphics_OLED_clear();
-    Graphics_OLED_printAt(26, 6, 0, "ARRANCAR?");
     Graphics_OLED_rect(8, 24, 48, 24);
     Graphics_OLED_printAt(26, 31, 1, "NO");
     Graphics_OLED_rect(72, 24, 48, 24);
@@ -94,6 +95,7 @@ void onReset()
     LEDs_Led1_state(1);
     pI2C("OLEDUP\t1");
     opcion = 0;
+    opcMenu = 0;
     pantalla = 0;
     MainScr1();
 }
@@ -114,6 +116,18 @@ void Keyboard_Nav_onPress(uint8_t key)
             {
                 pantalla = 2;
                 MenuScr();
+                switch ((uint8_t)(opcMenu))
+                {
+                    case 0:
+                        Graphics_OLED_rect(4, 17, 119, 11);
+                        break;
+                    case 1:
+                        Graphics_OLED_rect(4, 29, 119, 11);
+                        break;
+                    case 2:
+                        Graphics_OLED_rect(4, 41, 119, 11);
+                        break;
+                }
             }
             break;
         case 1:
@@ -126,9 +140,61 @@ void Keyboard_Nav_onPress(uint8_t key)
             {
                 pantalla = 2;
                 MenuScr();
+                switch ((uint8_t)(opcMenu))
+                {
+                    case 0:
+                        Graphics_OLED_rect(4, 17, 119, 11);
+                        break;
+                    case 1:
+                        Graphics_OLED_rect(4, 29, 119, 11);
+                        break;
+                    case 2:
+                        Graphics_OLED_rect(4, 41, 119, 11);
+                        break;
+                }
             }
             break;
         case 2:
+            if (key == 128)
+            {
+                if (opcMenu > 0)
+                {
+                    opcMenu = (uint8_t)(opcMenu - 1);
+                    MenuScr();
+                    switch ((uint8_t)(opcMenu))
+                    {
+                        case 0:
+                            Graphics_OLED_rect(4, 17, 119, 11);
+                            break;
+                        case 1:
+                            Graphics_OLED_rect(4, 29, 119, 11);
+                            break;
+                        case 2:
+                            Graphics_OLED_rect(4, 41, 119, 11);
+                            break;
+                    }
+                }
+            }
+            if (key == 129)
+            {
+                if (opcMenu < 2)
+                {
+                    opcMenu = (uint8_t)(opcMenu + 1);
+                    MenuScr();
+                    switch ((uint8_t)(opcMenu))
+                    {
+                        case 0:
+                            Graphics_OLED_rect(4, 17, 119, 11);
+                            break;
+                        case 1:
+                            Graphics_OLED_rect(4, 29, 119, 11);
+                            break;
+                        case 2:
+                            Graphics_OLED_rect(4, 41, 119, 11);
+                            break;
+                    }
+                }
+            }
             if (key == 130)
             {
                 pantalla = 0;
@@ -140,12 +206,36 @@ void Keyboard_Nav_onPress(uint8_t key)
             {
                 opcion = 0;
                 ConfirmScr();
+                switch ((uint8_t)(opcMenu))
+                {
+                    case 0:
+                        Graphics_OLED_printAt(41, 6, 0, "ARRANCAR?");
+                        break;
+                    case 1:
+                        Graphics_OLED_printAt(49, 6, 0, "PARAR?");
+                        break;
+                    case 2:
+                        Graphics_OLED_printAt(34, 6, 0, "RESET FALLO?");
+                        break;
+                }
                 Graphics_OLED_rect(10, 26, 44, 20);
             }
             if (key == 131)
             {
                 opcion = 1;
                 ConfirmScr();
+                switch ((uint8_t)(opcMenu))
+                {
+                    case 0:
+                        Graphics_OLED_printAt(41, 6, 0, "ARRANCAR?");
+                        break;
+                    case 1:
+                        Graphics_OLED_printAt(49, 6, 0, "PARAR?");
+                        break;
+                    case 2:
+                        Graphics_OLED_printAt(34, 6, 0, "RESET FALLO?");
+                        break;
+                }
                 Graphics_OLED_rect(74, 26, 44, 20);
             }
             break;
@@ -164,12 +254,35 @@ void Keyboard_Pad_onPress(uint8_t key)
                 pantalla = 3;
                 opcion = 0;
                 ConfirmScr();
+                switch ((uint8_t)(opcMenu))
+                {
+                    case 0:
+                        Graphics_OLED_printAt(41, 6, 0, "ARRANCAR?");
+                        break;
+                    case 1:
+                        Graphics_OLED_printAt(49, 6, 0, "PARAR?");
+                        break;
+                    case 2:
+                        Graphics_OLED_printAt(34, 6, 0, "RESET FALLO?");
+                        break;
+                }
                 Graphics_OLED_rect(10, 26, 44, 20);
                 break;
             case 3:
                 if (opcion == 1)
                 {
-                    pI2C("START\t1");
+                    switch ((uint8_t)(opcMenu))
+                    {
+                        case 0:
+                            pI2C("START\t1");
+                            break;
+                        case 1:
+                            pI2C("STOP\t1");
+                            break;
+                        case 2:
+                            pI2C("RESET\t1");
+                            break;
+                    }
                 }
                 pantalla = 0;
                 MainScr1();

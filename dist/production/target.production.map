@@ -506,9 +506,9 @@ External Symbols in Program Memory (by address):
                   0x0060b8                  _streamIn_t_ptr_to_ascii
                   0x0060f8                  _sendDataToStream
                   0x006414                  _MenuScr
-                  0x00645a                  _ConfirmScr
-                  0x0064ae                  _MainScr1
-                  0x006562                  _MainScr2
+                  0x00645a                  _MainScr1
+                  0x006500                  _MainScr2
+                  0x0065b4                  _ConfirmScr
                   0x006608                  _onReset
                   0x006620                  _Keyboard_Nav_onPress
                   0x0066d6                  _Keyboard_Pad_onPress
@@ -595,7 +595,7 @@ External Symbols in Program Memory (by name):
                   0x0055bc                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putChar
                   0x0055b4                  /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/Graphics_OLED.o:_putCharAvailable
                   0x007542                  _CollisionReset_I2C2
-                  0x00645a                  _ConfirmScr
+                  0x0065b4                  _ConfirmScr
                   0x0072d0                  _EMICBus_init
                   0x005d04                  _Edit_Edit1_init
                   0x0057a4                  _Graphics_OLED_bindAt
@@ -629,8 +629,8 @@ External Symbols in Program Memory (by name):
                   0x00761c                  _LEDs_Led1_init
                   0x007624                  _LEDs_Led1_state
                   0x0076da                  _LEDs_Led2_init
-                  0x0064ae                  _MainScr1
-                  0x006562                  _MainScr2
+                  0x00645a                  _MainScr1
+                  0x006500                  _MainScr2
                   0x006414                  _MenuScr
                   0x00754a                  _OverflowReset_I2C2
                   0x0075de                  _PMP_init
@@ -2455,9 +2455,9 @@ __xc_reference_data
                   0x0060f8                  _sendDataToStream
  .text            0x006414        0x43c /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/PNL_OLED_128X64_1/build/default/production/userFncFile.o
                   0x006414                  _MenuScr
-                  0x00645a                  _ConfirmScr
-                  0x0064ae                  _MainScr1
-                  0x006562                  _MainScr2
+                  0x00645a                  _MainScr1
+                  0x006500                  _MainScr2
+                  0x0065b4                  _ConfirmScr
                   0x006608                  _onReset
                   0x006620                  _Keyboard_Nav_onPress
                   0x0066d6                  _Keyboard_Pad_onPress
