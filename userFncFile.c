@@ -29,6 +29,8 @@ uint8_t estado = 0;
 uint8_t opcMenu = 0;
 uint8_t lazo = 1;
 uint16_t edit = 0;
+uint8_t tdfEst = 0;
+uint8_t queEdita = 0;
 
 void MainScr1(void)
 {
@@ -83,12 +85,13 @@ void ConfirmScr(void)
 void MenuScr(void)
 {
     Graphics_OLED_clear();
-    Graphics_OLED_printAt(10, 3, 0, "ARRANCAR MOTOR");
-    Graphics_OLED_printAt(10, 13, 0, "PARAR MOTOR");
-    Graphics_OLED_printAt(10, 23, 0, "SALIR DE FALLO");
-    Graphics_OLED_printAt(10, 33, 0, "LAZO:");
-    Graphics_OLED_printAt(10, 43, 0, "AJUSTAR MARIPOSA");
-    Graphics_OLED_printAt(4, 54, 0, "X=SALIR   OK=ENTRAR");
+    Graphics_OLED_printAt(10, 2, 0, "ARRANCAR MOTOR");
+    Graphics_OLED_printAt(10, 11, 0, "PARAR MOTOR");
+    Graphics_OLED_printAt(10, 20, 0, "SALIR DE FALLO");
+    Graphics_OLED_printAt(10, 29, 0, "LAZO:");
+    Graphics_OLED_printAt(10, 38, 0, "TDF:");
+    Graphics_OLED_printAt(10, 47, 0, "MARIPOSA");
+    Graphics_OLED_printAt(10, 55, 0, "RPM REF");
 }
 
 
@@ -96,7 +99,7 @@ void EditScr(void)
 {
     Graphics_OLED_clear();
     Graphics_OLED_rect(24, 20, 80, 24);
-    Graphics_OLED_bindAt(44, 27, 1, &edit, 1, "%3u");
+    Graphics_OLED_bindAt(40, 27, 1, &edit, 1, "%4u");
     Graphics_OLED_printAt(4, 52, 0, "X=CANCEL  OK=ACEPTA");
 }
 
@@ -130,28 +133,42 @@ void Keyboard_Nav_onPress(uint8_t key)
                 MenuScr();
                 if (lazo == 1)
                 {
-                    Graphics_OLED_printAt(46, 33, 0, "AUTO");
+                    Graphics_OLED_printAt(46, 29, 0, "AUTO");
                 }
                 else
                 {
-                    Graphics_OLED_printAt(46, 33, 0, "MAN ");
+                    Graphics_OLED_printAt(46, 29, 0, "MAN ");
+                }
+                if (tdfEst == 1)
+                {
+                    Graphics_OLED_printAt(42, 38, 0, "SI");
+                }
+                else
+                {
+                    Graphics_OLED_printAt(42, 38, 0, "NO");
                 }
                 switch ((uint8_t)(opcMenu))
                 {
                     case 0:
-                        Graphics_OLED_rect(2, 2, 123, 9);
+                        Graphics_OLED_rect(1, 1, 126, 9);
                         break;
                     case 1:
-                        Graphics_OLED_rect(2, 12, 123, 9);
+                        Graphics_OLED_rect(1, 10, 126, 9);
                         break;
                     case 2:
-                        Graphics_OLED_rect(2, 22, 123, 9);
+                        Graphics_OLED_rect(1, 19, 126, 9);
                         break;
                     case 3:
-                        Graphics_OLED_rect(2, 32, 123, 9);
+                        Graphics_OLED_rect(1, 28, 126, 9);
                         break;
                     case 4:
-                        Graphics_OLED_rect(2, 42, 123, 9);
+                        Graphics_OLED_rect(1, 37, 126, 9);
+                        break;
+                    case 5:
+                        Graphics_OLED_rect(1, 46, 126, 9);
+                        break;
+                    case 6:
+                        Graphics_OLED_rect(1, 54, 126, 9);
                         break;
                 }
             }
@@ -168,28 +185,42 @@ void Keyboard_Nav_onPress(uint8_t key)
                 MenuScr();
                 if (lazo == 1)
                 {
-                    Graphics_OLED_printAt(46, 33, 0, "AUTO");
+                    Graphics_OLED_printAt(46, 29, 0, "AUTO");
                 }
                 else
                 {
-                    Graphics_OLED_printAt(46, 33, 0, "MAN ");
+                    Graphics_OLED_printAt(46, 29, 0, "MAN ");
+                }
+                if (tdfEst == 1)
+                {
+                    Graphics_OLED_printAt(42, 38, 0, "SI");
+                }
+                else
+                {
+                    Graphics_OLED_printAt(42, 38, 0, "NO");
                 }
                 switch ((uint8_t)(opcMenu))
                 {
                     case 0:
-                        Graphics_OLED_rect(2, 2, 123, 9);
+                        Graphics_OLED_rect(1, 1, 126, 9);
                         break;
                     case 1:
-                        Graphics_OLED_rect(2, 12, 123, 9);
+                        Graphics_OLED_rect(1, 10, 126, 9);
                         break;
                     case 2:
-                        Graphics_OLED_rect(2, 22, 123, 9);
+                        Graphics_OLED_rect(1, 19, 126, 9);
                         break;
                     case 3:
-                        Graphics_OLED_rect(2, 32, 123, 9);
+                        Graphics_OLED_rect(1, 28, 126, 9);
                         break;
                     case 4:
-                        Graphics_OLED_rect(2, 42, 123, 9);
+                        Graphics_OLED_rect(1, 37, 126, 9);
+                        break;
+                    case 5:
+                        Graphics_OLED_rect(1, 46, 126, 9);
+                        break;
+                    case 6:
+                        Graphics_OLED_rect(1, 54, 126, 9);
                         break;
                 }
             }
@@ -203,62 +234,90 @@ void Keyboard_Nav_onPress(uint8_t key)
                     MenuScr();
                     if (lazo == 1)
                     {
-                        Graphics_OLED_printAt(46, 33, 0, "AUTO");
+                        Graphics_OLED_printAt(46, 29, 0, "AUTO");
                     }
                     else
                     {
-                        Graphics_OLED_printAt(46, 33, 0, "MAN ");
+                        Graphics_OLED_printAt(46, 29, 0, "MAN ");
+                    }
+                    if (tdfEst == 1)
+                    {
+                        Graphics_OLED_printAt(42, 38, 0, "SI");
+                    }
+                    else
+                    {
+                        Graphics_OLED_printAt(42, 38, 0, "NO");
                     }
                     switch ((uint8_t)(opcMenu))
                     {
                         case 0:
-                            Graphics_OLED_rect(2, 2, 123, 9);
+                            Graphics_OLED_rect(1, 1, 126, 9);
                             break;
                         case 1:
-                            Graphics_OLED_rect(2, 12, 123, 9);
+                            Graphics_OLED_rect(1, 10, 126, 9);
                             break;
                         case 2:
-                            Graphics_OLED_rect(2, 22, 123, 9);
+                            Graphics_OLED_rect(1, 19, 126, 9);
                             break;
                         case 3:
-                            Graphics_OLED_rect(2, 32, 123, 9);
+                            Graphics_OLED_rect(1, 28, 126, 9);
                             break;
                         case 4:
-                            Graphics_OLED_rect(2, 42, 123, 9);
+                            Graphics_OLED_rect(1, 37, 126, 9);
+                            break;
+                        case 5:
+                            Graphics_OLED_rect(1, 46, 126, 9);
+                            break;
+                        case 6:
+                            Graphics_OLED_rect(1, 54, 126, 9);
                             break;
                     }
                 }
             }
             if (key == 129)
             {
-                if (opcMenu < 4)
+                if (opcMenu < 6)
                 {
                     opcMenu = (uint8_t)(opcMenu + 1);
                     MenuScr();
                     if (lazo == 1)
                     {
-                        Graphics_OLED_printAt(46, 33, 0, "AUTO");
+                        Graphics_OLED_printAt(46, 29, 0, "AUTO");
                     }
                     else
                     {
-                        Graphics_OLED_printAt(46, 33, 0, "MAN ");
+                        Graphics_OLED_printAt(46, 29, 0, "MAN ");
+                    }
+                    if (tdfEst == 1)
+                    {
+                        Graphics_OLED_printAt(42, 38, 0, "SI");
+                    }
+                    else
+                    {
+                        Graphics_OLED_printAt(42, 38, 0, "NO");
                     }
                     switch ((uint8_t)(opcMenu))
                     {
                         case 0:
-                            Graphics_OLED_rect(2, 2, 123, 9);
+                            Graphics_OLED_rect(1, 1, 126, 9);
                             break;
                         case 1:
-                            Graphics_OLED_rect(2, 12, 123, 9);
+                            Graphics_OLED_rect(1, 10, 126, 9);
                             break;
                         case 2:
-                            Graphics_OLED_rect(2, 22, 123, 9);
+                            Graphics_OLED_rect(1, 19, 126, 9);
                             break;
                         case 3:
-                            Graphics_OLED_rect(2, 32, 123, 9);
+                            Graphics_OLED_rect(1, 28, 126, 9);
                             break;
                         case 4:
-                            Graphics_OLED_rect(2, 42, 123, 9);
+                            Graphics_OLED_rect(1, 37, 126, 9);
+                            break;
+                        case 5:
+                            Graphics_OLED_rect(1, 46, 126, 9);
+                            break;
+                        case 6:
+                            Graphics_OLED_rect(1, 54, 126, 9);
                             break;
                     }
                 }
@@ -388,36 +447,68 @@ void Keyboard_Pad_onPress(uint8_t key)
                         MenuScr();
                         if (lazo == 1)
                         {
-                            Graphics_OLED_printAt(46, 33, 0, "AUTO");
+                            Graphics_OLED_printAt(46, 29, 0, "AUTO");
                         }
                         else
                         {
-                            Graphics_OLED_printAt(46, 33, 0, "MAN ");
+                            Graphics_OLED_printAt(46, 29, 0, "MAN ");
+                        }
+                        if (tdfEst == 1)
+                        {
+                            Graphics_OLED_printAt(42, 38, 0, "SI");
+                        }
+                        else
+                        {
+                            Graphics_OLED_printAt(42, 38, 0, "NO");
                         }
                         switch ((uint8_t)(opcMenu))
                         {
                             case 0:
-                                Graphics_OLED_rect(2, 2, 123, 9);
+                                Graphics_OLED_rect(1, 1, 126, 9);
                                 break;
                             case 1:
-                                Graphics_OLED_rect(2, 12, 123, 9);
+                                Graphics_OLED_rect(1, 10, 126, 9);
                                 break;
                             case 2:
-                                Graphics_OLED_rect(2, 22, 123, 9);
+                                Graphics_OLED_rect(1, 19, 126, 9);
                                 break;
                             case 3:
-                                Graphics_OLED_rect(2, 32, 123, 9);
+                                Graphics_OLED_rect(1, 28, 126, 9);
                                 break;
                             case 4:
-                                Graphics_OLED_rect(2, 42, 123, 9);
+                                Graphics_OLED_rect(1, 37, 126, 9);
+                                break;
+                            case 5:
+                                Graphics_OLED_rect(1, 46, 126, 9);
+                                break;
+                            case 6:
+                                Graphics_OLED_rect(1, 54, 126, 9);
                                 break;
                         }
                         break;
                     case 4:
+                        if (tdfEst == 1)
+                        {
+                            pI2C("TDFOFF\t1");
+                        }
+                        else
+                        {
+                            pI2C("TDFON\t1");
+                        }
+                        break;
+                    case 5:
+                        queEdita = 0;
                         edit = 0;
                         pantalla = 4;
                         EditScr();
                         Graphics_OLED_printAt(28, 4, 0, "MARIPOSA");
+                        break;
+                    case 6:
+                        queEdita = 1;
+                        edit = 0;
+                        pantalla = 4;
+                        EditScr();
+                        Graphics_OLED_printAt(32, 4, 0, "RPM REF");
                         break;
                 }
                 break;
@@ -441,7 +532,14 @@ void Keyboard_Pad_onPress(uint8_t key)
                 MainScr1();
                 break;
             case 4:
-                pI2C("PAREF\t%u", edit);
+                if (queEdita == 0)
+                {
+                    pI2C("PAREF\t%u", edit);
+                }
+                else
+                {
+                    pI2C("RPMREF\t%u", edit);
+                }
                 pantalla = 0;
                 MainScr1();
                 break;
@@ -459,9 +557,9 @@ void Keyboard_Pad_onPress(uint8_t key)
             if (key <= 57)
             {
                 edit = edit * 10 + key - 48;
-                if (edit > 999)
+                if (edit > 1500)
                 {
-                    edit = 999;
+                    edit = 1500;
                 }
             }
         }
@@ -498,6 +596,10 @@ void eI2C(char* tag, const streamIn_t* const msg)
     else if (strncmp(tag, "PRES", 4) == 0)
     {
         pres = streamIn_t_ptr_to_uint16_t((streamIn_t*)msg);
+    }
+    else if (strncmp(tag, "TDFEST", 6) == 0)
+    {
+        tdfEst = streamIn_t_ptr_to_uint8_t((streamIn_t*)msg);
     }
     else if (strncmp(tag, "ESTADO", 6) == 0)
     {
