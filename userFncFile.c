@@ -107,12 +107,18 @@ void EditScr(void)
 void onReset()
 {
     LEDs_Led1_state(1);
-    pI2C("OLEDUP\t1");
+    setTime1(2000, 'T');
     opcion = 0;
     opcMenu = 0;
     lazo = 1;
     pantalla = 0;
     MainScr1();
+}
+
+
+void etOut1()
+{
+    pI2C("OLEDUP\t1");
 }
 
 

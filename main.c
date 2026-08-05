@@ -30,6 +30,7 @@ int main(void)
 	onReset();
 	do
 	{
+		timer1_Poll();
 		Graphics_OLED_poll();
 		Keyboard_Pad_poll();
 		Keyboard_Nav_poll();

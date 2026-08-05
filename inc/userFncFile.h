@@ -18,6 +18,7 @@ void ConfirmScr(void);
 void MenuScr(void);
 void EditScr(void);
 void onReset();
+void etOut1();
 void Keyboard_Nav_onPress(uint8_t key);
 void Keyboard_Pad_onPress(uint8_t key);
 void eI2C(char* tag, const streamIn_t* const msg);
